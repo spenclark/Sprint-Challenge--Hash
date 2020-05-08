@@ -10,18 +10,18 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    trips_dict = dict()
-    flight_routes = list()
+    trips = dict()
+    routes = list()
 
     for i in tickets:
-        trips_dict[i.source] = i.destination
+        trips[i.source] = i.destination
 
-    idx = 0
-    current_destination = "NONE"
+    index = 0
+    current = "NONE"
 
-    while idx < length:
-        current_destination = trips_dict.get(current_destination)
-        flight_routes.append(current_destination)
-        idx += 1
+    while index < length:
+        current = trips.get(current)
+        routes.append(current)
+        index += 1/
 
-    return flight_routes 
+    return routes 
