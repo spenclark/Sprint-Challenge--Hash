@@ -2,7 +2,23 @@ def intersection(arrays):
 
     """
     YOUR CODE HERE
-    """
+    """ 
+   
+    items = dict()
+    result = []
+
+    for i, num_list in enumerate(arrays):
+        for y in num_list:
+            if items.get(y) != None and i > 0:
+                items[y] = items[y] + 1
+            elif items.get(y) is None and i == 0: 
+                items[y] = 1
+            else:
+                continue
+
+    for num in items:
+        if items[num] == len(arrays):
+            result.append(num)
 
     return result
 
