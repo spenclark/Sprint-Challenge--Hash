@@ -22,6 +22,6 @@ def reconstruct_trip(tickets, length):
     while index < length:
         current = trips.get(current)
         routes.append(current)
-        index += 1/
+        index += 1
 
     return routes 
